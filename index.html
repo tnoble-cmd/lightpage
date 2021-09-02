@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+</head>    
+<body>
+<div class="hero">
+    <nav>
+        <img src="images/menu.png" class="menu-img">
+        <img src="images/logo.png" class="logo">
+        <ul>
+            <li><a href="">Latest</a></li>
+            <li><a href="">Modern</a></li>
+            <li><a href="">Contemporary</a></li>
+            <li><a href="">Affordable</a></li>
+        </ul>
+        <button type="button" onclick="toggleBtn()" id="btn"><span></span></button> <!--toggleBtn, added function to toggle the light on and off via{.button,.button.span (in css)} (css opacity==0)-->
+    </nav>
+
+    <div class="lamp-container">
+        <img src="images/lamp.png" class="lamp">
+        <img src="images/light.png" class="light" id="light"> <!--always add "id" when calling such item.-->
+    </div>
+
+    <div class="text-container">
+        <h1>Latest<br> in Lighting</h1>   
+        <p>This is will indeed change the way you look at lighting as a whole.
+             There is no other lamp on the market with the capabilities like ours. It is virtually imposible to replicate the quality and lighting.</p>
+        <a href="">Check Out The Collection</a>  
+        <div class="control">
+            <p>04</p>
+            <div class="line"><span></span></div> <!--.control line is white liine between 04&05. <span> is <.control line span>(css) green line slider.    -->
+            <p>05</p>
+        </div>   
+    </div>
+
+</div>
+<!--below is javascript-->
+<script> //Defined "btn" and def function toggleBtn(), such that toggling button will turn on light (.light opacity!=0) and change (.button bckrnd == green, .button.span from left to right)
+    var btn = document.getElementById("btn")
+    var light = document.getElementById("light")
+    function toggleBtn(){
+        btn.classList.toggle("active");//Added btn to toggle, calling css class ("active"), togglign button bkgrnd green.
+        light.classList.toggle("on")
+    }
+
+</script>
+</body>
+</html>
